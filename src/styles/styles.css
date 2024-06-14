@@ -1,0 +1,323 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, rgba(7, 172, 234, 1) 0%, rgba(134, 134, 134, 0.39) 100%);
+    font-family: Open Sans,Arial,sans-serif;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:auto; 
+    height:auto; 
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 10px 20px;
+    border-radius: 35px;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo {
+    border-radius: 35px;
+    width: 50px;  
+    height: auto;
+}
+
+.business-name {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px; 
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+a:hover {
+    color: #ddd;
+}
+
+
+
+.welcome-container {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.welcome-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('logo_c.png') no-repeat center;
+    padding-right: 260px;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 35px;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.welcome-container h1 {
+    font-size: 4.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.welcome-container p {
+    font-size: 3.0em;
+    margin: 10px 0 0 0;
+}
+
+
+.login-container {
+    background-color: #A4FDD0;
+    border-radius: 35px;
+    padding: 30px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: 60px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 100%;
+    
+}
+
+.tabs button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 35px;
+    border: 1px solid  #a8a8a8;
+}
+
+.tabs button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.form-container {
+    display: none;
+    width: 100%;
+}
+
+.form-container.active {
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #959494;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    background-color: #02de74;
+    font-family: source sans pro;
+    text-decoration: bold;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #007bff;
+}
+.recover-password {
+    font-size: 14px;
+    font-family: source sans pro;
+    color: #404040; 
+    margin-top: 20px; 
+  }
+.recover-password a{
+    font-size: 12px;
+    font-family: source sans pro;
+    color: #485aff;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+.create-account {
+    font-family: source sans pro;
+    color: #464646; 
+    font-size: 14px;
+    margin-top: 20px; 
+  }
+  
+  .create-account a {
+    font-family: source sans pro;
+    font-size: 14px;
+    color: #485aff;
+    text-decoration: none; 
+  }
+  
+  .create-account a:hover {
+    color: #ffffff; 
+    text-decoration: underline; 
+  }
+
+
+/* Contenedor principal que alinea su contenido verticalmente al centro y horizontalmente al centro */
+.contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Alinea horizontalmente al centro */
+}
+
+/* Contenedor específico para el formulario con alineación de elementos al centro y con espacio entre ellos */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos al centro */
+    gap: 20px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los inputs del formulario, definiendo dimensiones, colores y bordes */
+.contact-inputs {
+    width: 600px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    color: #000000;
+    border-radius: 10px;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding: 15px;
+    width: 600px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #000000;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #8800ff; 
+}
+
+.contact-inputs::placeholder {
+    color: #030303;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center; 
+    padding: 15px 30px; 
+    font-size: 16px; 
+    color: #fff; 
+    gap: 10px; 
+    border: none;
+    background: #6b00e5;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.message-container {
+    position: relative;
+    color: white;
+    border-radius: 35px;
+    transition: all 0.5s ease;
+    font-size: 30px;
+    margin-top: 250px; 
+}
+

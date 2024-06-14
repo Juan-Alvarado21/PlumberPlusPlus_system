@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    background: linear-gradient(to bottom, rgba(7, 172, 234, 1) 0%, rgba(134, 134, 134, 0.39) 100%);
+    font-family: Open Sans, Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 10px 20px;
+    border-radius: 35px;
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 35px;
+    width: 50px;
+    height: auto;
+}
+
+.business-name {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    height: 30%;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background: linear-gradient(to bottom, rgba(26, 204, 140, 1) 0%, rgba(113, 222, 242, 0) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services-container h2 {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Aumentar la separación entre las imágenes */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item img {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.service-item span {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 140px;
+}
+
+.service-item.highlight img {
+    transform: translateY(-10px);
+    animation: shake 1.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70% { transform: translateX(-10px); }
+    20%, 40%, 60% { transform: translateX(10px); }
+}
+
+.content {
+    width: calc(100% - 340px);
+    padding: 20px;
+    background-color: #d6eaf8;
+    border-radius: 10px;
+    margin-left: 20px;
+    overflow-y: auto;
+}
+
+.content h2 {
+    color: #2874a6;
+    font-size: 1.5em;
+}
+
+#servicios {
+    padding: 20px;
+    background-color: #f8f9f9;
+}
+
+#servicios h2 {
+    text-align: center;
+    color: #2874a6;
+    margin-bottom: 20px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Añadir espacio entre los cards */
+}
+
+.service-card img {
+    width: 400px; /* Aumentar tamaño de las imágenes */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.service-card h3 {
+    color: #2874a6;
+    margin: 10px 0;
+}
+
+.service-card p {
+    color: #5d6d7e;
+    margin-bottom: 10px;
+}
+
+
+
+.service-card button:hover {
+    background-color: #1a5276;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button {
+    padding: 20px 30px;
+    background-color: #2874a6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    padding: 20px 30px;
+    background-color: #0e01ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .services-container {
+        width: 25%;
+    }
+
+    .content {
+        width: 75%;
+    }
+}
+
+.img {
+    width: 100%;
+    max-width: 450px; /* Ajusta el tamaño máximo según tus necesidades */
+    border-radius: 10px; /* Bordes ligeramente redondos */
+    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+    margin-top: 20px;
+}
+
+.img img {
+    width: 100%;
+    height: 250px;
+    display: block;
+}
