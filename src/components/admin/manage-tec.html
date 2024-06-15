@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionar Técnicos</title>
+  <link rel="stylesheet" href="styles/styleTec.css">
+  <link rel="stylesheet" href="styles/styleMain.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="logo_container" id="logo-container">
+        <img src="images/logo.webp" alt="Logo" class="logo"/>
+        <span class="business-name">Plumber++</span>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="destok.html">Dashboard</a></li>
+        <li><a href="manage-users.html">Gestionar Usuarios</a></li>
+        <li><a href="manage-tec.html">Gestionar Técnicos</a></li>
+        <li><a href="../technician/materialUsado.html">Gestionar Materiales</a></li>
+      </ul>
+    </nav>
+    <div class="user-info-container">
+      <div class="user-info" id="user-info">
+        <img src="images/admin_icon.jpg" alt="admin" class="user-icon">
+        <span class="user-name">Nombre de Usuario</span>
+        <i class="dropdown-icon">▼</i>
+      </div>
+      <div class="dropdown-menu" id="dropdown-menu">
+        <a href="#">Perfil</a>
+        <a href="#">Configuración</a>
+        <a href="#">Cerrar Sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-container">
+    <section class="admin-section">
+      <h1>Gestionar Técnicos</h1>
+      <button class="add-tech-btn">Agregar Técnico</button>
+    </section>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filas de técnicos -->
+          <tr>
+            <td>1</td>
+            <td>María López</td>
+            <td>Fontanería</td>
+            <td>
+              <button class="edit-btn">Editar</button>
+              <button class="delete-btn">Eliminar</button>
+            </td>
+          </tr>
+          <!-- Más filas de técnicos -->
+        </tbody>
+      </table>
+    </main>
+
+    <section class="report-section">
+      <h2>Reporte de Horas Laboradas</h2>
+      <form id="report-form">
+        <label for="start-date">Fecha de inicio:</label>
+        <input type="date" id="start-date" name="start-date" required>
+
+        <label for="end-date">Fecha de finalización:</label>
+        <input type="date" id="end-date" name="end-date" required>
+
+        <button type="submit">Generar Reporte</button>
+      </form>
+      
+      <table id="report-table">
+        <thead>
+          <tr>
+            <th>Nombre del Técnico</th>
+            <th>Fecha</th>
+            <th>Hora de Inicio</th>
+            <th>Hora de Finalización</th>
+            <th>Horas Trabajadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filas del reporte -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="modal" id="tech-modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Agregar/Editar Técnico</h2>
+      <form id="tech-form">
+        <label for="tech-id">ID:</label>
+        <input type="text" id="tech-id" name="tech-id" disabled>
+
+        <label for="tech-name">Nombre:</label>
+        <input type="text" id="tech-name" name="tech-name" required>
+
+        <label for="tech-specialty">Especialidad:</label>
+        <input type="text" id="tech-specialty" name="tech-specialty" required>
+
+        <button type="submit">Guardar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/manageTec.js"></script>
+</body>
+</html>
+

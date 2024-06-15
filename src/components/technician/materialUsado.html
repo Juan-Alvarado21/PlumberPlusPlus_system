@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales Utilizados</title>
+	<link rel="stylesheet" href="../admin/styles/styleMain.css">
+    <link rel="stylesheet" href="styles/styleTable.css">
+</head>
+<body>
+	<header>
+	 <nav class="navbar" id="navbar">
+      <div class="logo_container" id="logo-container">
+        <img src="images/logo.webp" alt="Logo" class="logo"/>
+        <span class="business-name">Plumber++</span>
+      </div>
+      <ul class = "menu" id="menu">
+		<li><a href="../admin/destok.html">Dashboard</a></li>
+		<li><a href="../admin/manage-users.html">Gestionar Usuarios</a></li>
+		<li><a href="../admin/manage-tec.html">Gestionar Tecnicos</a></li>
+		<li><a href="materialUsado.html">Gestionar Materiales</a></li>
+      </ul>
+    </nav> 
+		<div class="user-info-container">
+			<div class="user-info" id="user-info">
+				<img src="images/admin_icon.jpg" alt="admin" class="user-icon">
+				<span class="user-name">Nombre de Usuario</span>
+				<i class="dropdown-icon">▼</i>
+			</div>
+			<div class="dropdown-menu" id="dropdown-menu">
+				<a href="#">Perfil</a>
+				<a href="#">Configuración</a>
+				<a href="#">Cerrar Sesión</a>
+			</div>
+        </div>
+	</header>
+    <div class="container">
+        <main>
+            <section class="header">
+                <!-- Aquí se pueden agregar los datos que ya tienes -->
+            </section>
+            <section class="content">
+                <article class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID del Material</th>
+                                <th>Nombre del Material</th>
+                                <th>Descripción</th>
+                                <th>Cantidad Usada</th>
+                                <th>Unidad de Medida</th>
+                                <th>Costo Unitario</th>
+                                <th>Costo Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tubería PVC</td>
+                                <td>Tubería de PVC de 1"</td>
+                                <td>10</td>
+                                <td>metros</td>
+                                <td>$3.00</td>
+                                <td>$30.00</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Codo 90° PVC</td>
+                                <td>Codo de 90° de PVC</td>
+                                <td>5</td>
+                                <td>unidades</td>
+                                <td>$1.50</td>
+                                <td>$7.50</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Sellador de Roscas</td>
+                                <td>Tubo de sellador</td>
+                                <td>2</td>
+                                <td>unidades</td>
+                                <td>$5.00</td>
+                                <td>$10.00</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Válvula de Cierre</td>
+                                <td>Válvula de cierre</td>
+                                <td>3</td>
+                                <td>unidades</td>
+                                <td>$12.00</td>
+                                <td>$36.00</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cinta Teflón</td>
+                                <td>Rollo de cinta teflón</td>
+                                <td>1</td>
+                                <td>unidades</td>
+                                <td>$1.00</td>
+                                <td>$1.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="total">
+                        <label for="total">TOTAL</label>
+                        <input type="text" id="total" readonly>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+	<script src="scripts/menu.js"></script>
+</body>
+</html>
+

@@ -25,7 +25,6 @@ header {
 main {
 	flex-grow: 1;
 	padding: 15px;
-	border: 1px solid #000;
 }
 
 .navbar {
@@ -142,3 +141,64 @@ footer {
     color: #333; /* Color del texto */
     font-size: 0.8em; /* Tamaño más pequeño del texto */
 }
+
+#iconAdmin{
+	border-radius: 35px;
+    width: 60px;  
+    height: 60px;
+	opacity: 0.5;
+}
+
+.user-info-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.user-name {
+    color: white;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+.dropdown-icon {
+    color: white;
+    font-size: 0.8em;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.6s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
