@@ -1,0 +1,73 @@
+
+#encabezado {
+	border-radius: 10px;
+	background-color: #CFCFCF;
+	position: relative;
+	color: black;
+	width: 100%;
+	height: 130px;
+	padding-top: 40px;
+	margin-top: 20px;
+}
+
+#encabezado h1{
+	text-align: center;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+#encabezado img{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 50px;
+}
+
+#periodoTexto {
+	font-weight: bold;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#contenedorTablaPrincipal {
+	padding-top: 20px;
+	font-size: 1.5em;
+}
+
+#contenedorTablaPrincipal table,tr,th,td {
+	border: 2px solid #C0C0C0;
+}
+#contenedorTablaPrincipal table {
+	border-collapse: collapse;
+	background-color: white;
+	color:black;
+}
+
+#contenedorTablaPrincipal thead {
+	font-weight: bold;
+	background-color: #e5e5e5;
+	height: 60px;
+}
+
+#servicio {
+	width:40%;
+}
+#cantidad {
+	width:20%;
+}
+#costo {
+	width:10%;
+}
+#ingresos {
+	width:10%;
+}
+#detalles {
+	width:10%;
+}
+.contMostrar {
+	text-align: center;
+}
+.mostrar {
+	background-color: green;
+	border-radius: 5px;
+}

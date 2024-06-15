@@ -1,3 +1,7 @@
+body {
+	color: black;
+}
+
 #destok{
 	background-color: #ffe5b4;
 	border-radius: 20px;
@@ -25,14 +29,14 @@ section > button {
 	border-radius: 10px;
 	grid-row: 2;
 	width: 100px; /* Ancho del botón */
-	height: 40px; /* Altura del botón */
+	/*height: 40px; /* Altura del botón */
 	justify-self: center; /* Alinea el botón horizontalmente en el centro */
 	align-self: center; /* Alinea el botón verticalmente en el centro */
 }
 
 .button {
   width: 130px; /* Ajusta el ancho del botón */
-  height: 45px; /* Ajusta la altura del botón */
+  /*height: 45px; /* Ajusta la altura del botón */
   background-color: #fff; /* Fondo blanco */
   border: 2px solid #000; /* Borde negro */
   border-radius: 12px; /* Bordes redondeados */
