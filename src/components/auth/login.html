@@ -144,16 +144,16 @@
       </div>
     </div>
 
+    <div id="success-alert" class="success-alert">
+      Iniciaste sesión correctamente.
+    </div>
+
     <script>
       function showForm(formId) {
-        // Ocultar todos los formularios
         const forms = document.querySelectorAll(".form-container");
         forms.forEach((form) => form.classList.remove("active"));
-
-        // Mostrar el formulario seleccionado
         document.getElementById(formId).classList.add("active");
 
-        // Cambiar el botón activo
         const buttons = document.querySelectorAll(".tab-button");
         buttons.forEach((button) => button.classList.remove("active"));
         document
@@ -164,22 +164,24 @@
       function validateForm(formId) {
         const form = document.getElementById(formId);
 
-        const emailInput = document.getElementById("emailInput");
-        const emailValue = emailInput.value;
-
-        // Validar el formato del correo electrónico utilizando una expresión regular
-        const emailRegex = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        const isValidEmail = emailRegex.test(emailValue);
-
-        if (form.checkValidity() && isValidEmail) {
-          alert("Formulario válido. Enviando...");
+        if (form.checkValidity()) {
+          showSuccessAlert(formId);
         } else {
-          if (!isValidEmail) {
-            alert("El correo electrónico no es válido.");
-          } else {
-            alert("Por favor, completa todos los campos correctamente.");
-          }
+          alert("Por favor, completa todos los campos correctamente.");
         }
+      }
+      function showSuccessAlert(formId) {
+        const alertBox = document.getElementById("success-alert");
+        alertBox.style.display = "block";
+        setTimeout(() => {
+          if (formId === "admin-form") {
+            window.location.href = "../admin/destok.html";
+          } else if (formId === "tech-form") {
+            window.location.href = "../technician/start_tech.html";
+          } else {
+            window.location.href = "start_usr.html";
+          }
+        }, 1000);
       }
     </script>
   </body>

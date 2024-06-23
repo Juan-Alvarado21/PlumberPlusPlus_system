@@ -9,15 +9,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     background: linear-gradient(to right, #6a11cb, #2575fc);
     padding: 10px 20px;
-    border-radius: 35px;
+    border-radius: 70px;
+    margin: 10px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo_container {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.logo_container span:first-child {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.logo_container:hover span:first-child {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .logo {
@@ -38,6 +56,8 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    flex-grow: 1;
+    justify-content: space-evenly;
 }
 
 .navbar ul li {
@@ -54,6 +74,59 @@ body {
 
 .navbar ul li a:hover {
     background: rgba(255, 255, 255, 0.3);
+}
+
+.user-info-container {
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.user-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.user-name {
+    color: white;
+}
+
+.dropdown-icon {
+    color: white;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-menu a {
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
 }
 
 .container {
@@ -167,8 +240,6 @@ body {
     margin-bottom: 10px;
 }
 
-
-
 .service-card button:hover {
     background-color: #1a5276;
 }
@@ -214,9 +285,9 @@ body {
 
 .img {
     width: 100%;
-    max-width: 450px; /* Ajusta el tamaño máximo según tus necesidades */
-    border-radius: 10px; /* Bordes ligeramente redondos */
-    overflow: hidden; /* Para que los bordes redondeados se apliquen correctamente */
+    max-width: 400px; 
+    border-radius: 80px; 
+    overflow: hidden; 
     margin-top: 20px;
 }
 

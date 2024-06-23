@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Inicio - Técnico Plumber++</title>
+    <link rel="stylesheet" href="styles/styleStart.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo_container" onclick="toggleSidebar()">
+        <span>Ver Opciones</span>
+        <img src="../../img/list.jpg" alt="Logo" class="logo" />
+      </div>
+      <ul>
+        <li><a href="../../index.html">Principal</a></li>
+        <li><a href="../../store.html">Catálogo</a></li>
+        <li><a href="">Conócenos</a></li>
+        <li><a href="">Únete</a></li>
+        <li><a href="../../contact.html">Contáctanos</a></li>
+      </ul>
+      <div class="user-info-container">
+        <div class="user-info" id="user-info" onclick="toggleDropdown()">
+          <img src="../../img/tecn_icono.png" alt="user" class="user-icon" />
+          <span class="user-name">Técnico</span>
+          <i class="dropdown-icon">▼</i>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <img src="../../img/dropmenu.png" alt="user" class="user-icon" />
+          <a href="#">Perfil</a>
+          <a href="#">Configuración</a>
+          <a href="../auth/login.html">Cerrar Sesión</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="../../img/logo_A.png"
+            alt="Logo"
+            class="sidebar-logo"
+            onclick="toggleSidebar()"
+          />
+        </div>
+        <ul>
+          <li><a href="#">Mi Cuenta</a></li>
+          <li><a href="#">Configuración</a></li>
+          <li><a href="#">Historial de Trabajos</a></li>
+          <li><a href="#">Pedidos de Material</a></li>
+          <li><a href="#">Soporte Técnico</a></li>
+          <li><a href="../auth/login.html">Cerrar Sesión</a></li>
+        </ul>
+      </aside>
+      <section class="content">
+        <div class="welcome-container">
+          <h1>¡Bienvenido, Técnico!</h1>
+          <p>
+            Esta es la página principal donde puedes gestionar todos los
+            aspectos de tus trabajos y servicios de Plumber++.
+          </p>
+          <img src="../../img/luigi.png" alt="Luigi" class="welcome-image" />
+        </div>
+        <div class="dashboard-container">
+          <h2>Pizarrón de Técnico</h2>
+          <div class="dashboard-content">
+            <div class="dashboard-item">
+              <h3>Trabajos Disponibles</h3>
+              <p>Consulta y administra los trabajos pendientes y asignados.</p>
+              <p><strong>Trabajos Asignados:</strong> 5</p>
+              <p><strong>Trabajos Pendientes:</strong> 3</p>
+              <button onclick="window.location.href='available_jobs.html'">
+                Ver Trabajos
+              </button>
+            </div>
+            <div class="dashboard-item">
+              <h3>Gráfica de Rendimiento</h3>
+              <p>Visualiza tu rendimiento en base a los trabajos realizados.</p>
+              <p><strong>Trabajos Completados:</strong> 12</p>
+              <p><strong>Calificación Promedio:</strong> 4.5/5</p>
+              <button onclick="window.location.href='performance_chart.html'">
+                Ver Gráfica
+              </button>
+            </div>
+            <div class="dashboard-item">
+              <h3>Servicios Realizados</h3>
+              <p>Consulta los servicios que has realizado en el periodo.</p>
+              <p><strong>Total Servicios:</strong> 20</p>
+              <p><strong>Ingresos Generados:</strong> $15,000 MXN</p>
+              <button onclick="window.location.href='completed_services.html'">
+                Ver Servicios
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; Plumber++ Tilines.inc</p>
+      <p>Contamos con 4 módulos en CDMX, todos simétricos para tu comodidad.</p>
+      <div class="contact">
+        <p>Contáctanos al:</p>
+        <p class="phone-number">553-639-1888</p>
+      </div>
+    </footer>
+    <script>
+      function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const content = document.querySelector(".content");
+        sidebar.classList.toggle("active");
+        content.classList.toggle("shifted");
+      }
+
+      function toggleDropdown() {
+        const dropdownMenu = document.getElementById("dropdown-menu");
+        dropdownMenu.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
