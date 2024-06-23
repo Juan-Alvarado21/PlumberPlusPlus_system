@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles/styleMain.css">
-	<link rel="stylesheet" href="styles/styleDestok.css">
-	<title>Admi</title>
-</head>
-<body>
-	<header>
-	 <nav class="navbar" id="navbar">
-      <div class="logo_container" id="logo-container">
-        <img src="images/logo.webp" alt="Logo" class="logo"/>
-        <span class="business-name">Plumber++</span>
-      </div>
-      <ul class = "menu" id="menu">
-		<li><a href="destok.html">Dashboard</a></li>
-		<li><a href="manage-users.html">Gestionar Usuarios</a></li>
-		<li><a href="manage-tec.html">Gestionar Tecnicos</a></li>
-		<li><a href="../technician/materialUsado.html">Gestionar Materiales</a></li>
-      </ul>
-    </nav> 
-		<div class="user-info-container">
-			<div class="user-info" id="user-info">
-				<img src="images/admin_icon.jpg" alt="admin" class="user-icon">
-				<span class="user-name">Nombre de Usuario</span>
-				<i class="dropdown-icon">▼</i>
-			</div>
-			<div class="dropdown-menu" id="dropdown-menu">
-				<a href="#">Perfil</a>
-				<a href="#">Configuración</a>
-				<a href="#">Cerrar Sesión</a>
-			</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styleMain.css" />
+    <link rel="stylesheet" href="styles/styleDestok.css" />
+    <title>Admi</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar" id="navbar">
+        <div class="logo_container" id="logo-container">
+          <img src="images/logo.webp" alt="Logo" class="logo" />
+          <span class="business-name">Plumber++</span>
         </div>
-	</header>
-	<main>
-		<div id="destok">
-		<section>
-			<h2>Informacion de la empresa</h2>
-			<div>
-				<button class="button" onclick="location.href ='reporteCostosServicios.html'">Reporte costo de servicios</button>
-				<button class="button" onclick="location.href ='reporteMaterialUsado.html'">Reporte Material Usado</button>
-				<button class="button" onclick="location.href ='disponibilidadAlmacen.html'">Reporte de Disponibilidad</button>
-				<button class="button" onclick="location.href ='controlAlmacen.html'">Reporte de Control de Almacen</button>
-			</div>
-			<article>
-				<h3>Datos economicos</h3>
-			</article>
-			<article>
-				<h3>Datos de los empleados</h3>
-			</article>
-		</section>
-		<aside>
-			<h2>Ventas promedio</h2>
-			<img src="images/grafica.png" alt="">
-		</aside>
-		</div>
-	</main>
-	<script src="scripts/menu.js"></script>
-</body>
+        <ul class="menu" id="menu">
+          <li><a href="destok.html">Dashboard</a></li>
+          <li><a href="manage-users.html">Gestionar Usuarios</a></li>
+          <li><a href="manage-tec.html">Gestionar Tecnicos</a></li>
+          <li>
+            <a href="../technician/materialUsado.html">Gestionar Materiales</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-info-container">
+        <div class="user-info" id="user-info">
+          <img src="images/admin_icon.jpg" alt="admin" class="user-icon" />
+          <span class="user-name">Nombre de Usuario</span>
+          <i class="dropdown-icon">▼</i>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+          <a href="#">Perfil</a>
+          <a href="#">Configuración</a>
+          <a href="../auth/login.html">Cerrar Sesión</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="destok">
+        <section>
+          <h2>Informacion de la empresa</h2>
+          <div>
+            <button
+              class="button"
+              onclick="location.href ='reporteCostosServicios.html'"
+            >
+              Reporte costo de servicios
+            </button>
+            <button
+              class="button"
+              onclick="location.href ='reporteMaterialUsado.html'"
+            >
+              Reporte Material Usado
+            </button>
+            <button
+              class="button"
+              onclick="location.href ='disponibilidadAlmacen.html'"
+            >
+              Reporte de Disponibilidad
+            </button>
+            <button
+              class="button"
+              onclick="location.href ='controlAlmacen.html'"
+            >
+              Reporte de Control de Almacen
+            </button>
+          </div>
+          <article>
+            <h3>Datos economicos</h3>
+          </article>
+          <article>
+            <h3>Datos de los empleados</h3>
+          </article>
+        </section>
+        <aside>
+          <h2>Ventas promedio</h2>
+          <img src="images/grafica.png" alt="" />
+        </aside>
+      </div>
+    </main>
+    <script src="scripts/menu.js"></script>
+  </body>
 </html>
