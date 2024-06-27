@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.	Ventana Pantalla solicitando dirección fecha hora y tipo de servicio</title>
+    <link rel="stylesheet" href="styles0.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo_container">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <span class="business-name">Plumber++</span>
+      </div>
+      <ul>
+        <li><a href="index.html">Principal</a></li>
+        <li><a href="login.html">Iniciar Sesión</a></li>
+        <li><a href="store.html">Catálogo</a></li>
+        <li><a href="#">Conócenos</a></li>
+        <li><a href="#">Únete</a></li>
+        <li><a href="contact.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+    
+    <article>
+      <h1>Servicio</h1>
+
+      <div class="form-group">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha">
+      </div>
+
+      <div class="form-group">
+          <label for="categoria">Selecciona una categoría de servicio</label>
+          <select id="categoria" name="categoria">
+              <option value="mantenimiento">Mantenimiento</option>
+              <option value="reparacion">Reparación</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="nombre">Selecciona un nombre</label>
+          <select id="nombre" name="nombre">
+              <!-- Los nombres deben ser cargados desde una base de datos -->
+              <option value="nombre1">Nombre 1</option>
+              <option value="nombre2">Nombre 2</option>
+              <option value="nombre3">Nombre 3</option>
+          </select>
+      </div>
+
+      <!-- Imagen con id flecha -->
+      <img id="flecha" src="flecha.png" alt="Flecha" onclick="window.location.href='index.html'">
+  </article>
+
+  </article>
+    
+  </body>
+</html>
