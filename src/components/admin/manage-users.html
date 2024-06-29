@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Usuarios</title>
+    <link rel="stylesheet" href="styles/styleMain.css">
+    <link rel="stylesheet" href="styles/styleUsers.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo_container" id="logo-container">
+                <img src="images/logo.webp" alt="Logo" class="logo">
+                <span class="business-name">Plumber++</span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="destok.html">Dashboard</a></li>
+                <li><a href="manage-users.html">Gestionar Usuarios</a></li>
+                <li><a href="manage-tec.html">Gestionar Técnicos</a></li>
+                <li><a href="../technician/materialUsado.html">Gestionar Materiales</a></li>
+            </ul>
+        </nav>
+        <div class="user-info-container">
+            <div class="user-info" id="user-info">
+                <img src="images/admin_icon.jpg" alt="admin" class="user-icon">
+                <span class="user-name">Nombre de Usuario</span>
+                <i class="dropdown-icon">▼</i>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a href="#">Perfil</a>
+                <a href="#">Configuración</a>
+                <a href="#">Cerrar Sesión</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <section class="admin-section">
+            <h2>Administrar Usuarios</h2>
+            <button class="add-user-btn">Agregar Usuario</button>
+        </section>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    <!-- Filas de usuarios cargadas con JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <!-- Modal para agregar/editar usuarios -->
+    <div class="modal" id="user-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Agregar/Editar Usuario</h2>
+            <form id="user-form">
+                <input type="hidden" name="action" id="modal-action">
+                <label for="user-id">ID:</label>
+                <input type="text" id="user-id" name="id" readonly>
+
+                <label for="user-name">Nombre:</label>
+                <input type="text" id="user-name" name="nombre" required>
+
+                <label for="user-email">Correo:</label>
+                <input type="email" id="user-email" name="correo" required>
+
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/manageUser.js"></script>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>
