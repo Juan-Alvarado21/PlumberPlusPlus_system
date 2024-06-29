@@ -18,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$select->close();
 
 	if(sizeof($arr)>=1) {
-//		$_SESSION['usuario'] = $arr[0]['usuario'];
-		//		$_SESSION['tipo'] = $arr[0]['tipoUsuario'];
+		$_SESSION['usuario'] = $arr[0]['usuario'];
+		$_SESSION['tipo'] = $arr[0]['tipoUsuario'];
 		$hashedPassword = $arr[0]['contrasenia'];
 		if (password_verify($password, $hashedPassword)) {
 			// Existe el usuario con la contrasenia
@@ -36,9 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				break;
 				
 			}
+		} else {
+			header("Location: login.php");
 		}
 	} else {
 		// Correo no fue encontrado
+		header("Location: login.php");
 	}
 
 
