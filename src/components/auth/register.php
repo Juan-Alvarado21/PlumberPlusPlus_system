@@ -37,46 +37,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT); // Cifrar la contraseña
 
-    // Determinar el nombre correspondiente al tipo de cuenta
-    $nombreTipoCuenta = '';
-    if ($tipoCuenta === 'Usuario') {
-        $nombreTipoCuenta = 'Usuario';
-    } elseif ($tipoCuenta === 'Administrador') {
-        $nombreTipoCuenta = 'Administrador';
-    } elseif ($tipoCuenta === 'Técnico') {
-        $nombreTipoCuenta = 'Técnico';
-    } else {
-        die("Tipo de cuenta no válido");
+    // Asignar el idTipoUsuario basado en el tipo de cuenta
+    switch ($tipoCuenta) {
+        case 'Administrador':
+            $idTipoUsuario = 1;
+            break;
+        case 'Técnico':
+            $idTipoUsuario = 2;
+            break;
+        case 'Usuario':
+            $idTipoUsuario = 3;
+            break;
+        default:
+            die("Tipo de cuenta no válido");
     }
-
-    // Verificar si el tipo de usuario ya existe
-    $sql_check_tipo = $conn->prepare("SELECT idTipoUsuario FROM TipoUsuarioCAT WHERE nombre = ?");
-    if (!$sql_check_tipo) {
-        die("Error preparando la consulta: " . $conn->error);
-    }
-    $sql_check_tipo->bind_param("s", $nombreTipoCuenta);
-    $sql_check_tipo->execute();
-    $result_check_tipo = $sql_check_tipo->get_result();
-
-    if ($result_check_tipo->num_rows > 0) {
-        $row = $result_check_tipo->fetch_assoc();
-        $idTipoUsuario = $row['idTipoUsuario'];
-    } else {
-        // Insertar en TipoUsuarioCAT si no existe
-        $sql_tipo_usuario = $conn->prepare("INSERT INTO TipoUsuarioCAT (nombre) VALUES (?)");
-        if (!$sql_tipo_usuario) {
-            die("Error preparando la consulta: " . $conn->error);
-        }
-        $sql_tipo_usuario->bind_param("s", $nombreTipoCuenta);
-        if ($sql_tipo_usuario->execute() === TRUE) {
-            $idTipoUsuario = $conn->insert_id;
-        } else {
-            echo "Error al insertar en TipoUsuarioCAT: " . $sql_tipo_usuario->error;
-            exit();
-        }
-        $sql_tipo_usuario->close();
-    }
-    $sql_check_tipo->close();
 
     // Crear la consulta de inserción en la tabla Usuario
     $sql_usuario = $conn->prepare("INSERT INTO Usuario (idTipoUsuario, correo, contrasenia, nombres, primerApellido, segundoApellido, fechaNacimiento) VALUES (?, ?, ?, ?, ?, ?, ?)");
