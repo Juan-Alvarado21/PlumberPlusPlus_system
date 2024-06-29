@@ -60,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_usuario->bind_param("issssss", $idTipoUsuario, $email, $hashedPassword, $nombres, $primerApellido, $segundoApellido, $fechaNacimiento);
 
     if ($sql_usuario->execute() === TRUE) {
-        echo "Usuario registrado exitosamente.<br>";
-        // Redirigir al login.php si el registro es exitoso
+        //echo "Usuario registrado exitosamente.<br>";
+		// Redirigir al login.php si el registro es exitoso
         header("Location: login.php");
         exit();
     } else {
