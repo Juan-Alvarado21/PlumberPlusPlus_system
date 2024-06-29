@@ -6,11 +6,7 @@
     <title>Dirección</title>
     <link rel="stylesheet" href="styles/styles5.css" />
     <!--AQUI VA LA API KEY DE MAPS-->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-      async
-      defer
-    ></script>
+
   </head>
   <body>
     <nav class="navbar">
