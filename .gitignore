@@ -1,3 +1,5 @@
-src/config/bd.php
+src/config/db.php
 src/components/auth/aux.php
 src/index.php
+
+

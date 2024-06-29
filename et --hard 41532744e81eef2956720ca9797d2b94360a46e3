@@ -1,0 +1,128 @@
+[33mcommit ca5a5e4d98dde3f79a91c507aa547764a0633994[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Juan-Alvarado21 <jalvarados1900@alumno.ipn.mx>
+Date:   Fri Jun 28 15:10:31 2024 -0600
+
+    Revert "Cambios en archivos"
+    
+    This reverts commit 52f0a2d6e59201f5eae005bb98cc00eab2b11a4b.
+
+[33mcommit 52f0a2d6e59201f5eae005bb98cc00eab2b11a4b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Juan-Alvarado21 <jalvarados1900@alumno.ipn.mx>
+Date:   Fri Jun 28 15:02:09 2024 -0600
+
+    Cambios en archivos
+
+[33mcommit 41532744e81eef2956720ca9797d2b94360a46e3[m
+Author: Juan Manuel Alvarado <76979404+Juan-Alvarado21@users.noreply.github.com>
+Date:   Fri Jun 28 13:48:34 2024 -0600
+
+    Update db.php
+
+[33mcommit 330e09f01caf611416010d977727cf41fd9bf6b9[m
+Author: Juan-Alvarado21 <jalvarados1900@alumno.ipn.mx>
+Date:   Fri Jun 28 13:46:50 2024 -0600
+
+    Commit all tracked changes and new files
+
+[33mcommit 4982df3416f2ba121842975259a7d9d701fc14ce[m
+Author: Juan-Alvarado21 <jalvarados1900@alumno.ipn.mx>
+Date:   Thu Jun 27 12:15:16 2024 -0600
+
+    Cambios en el front
+
+[33mcommit bf0648f30fe18d33e1abe063eb8a1a74de2ef62c[m
+Author: Ergusha11 <gustah901@gmail.com>
+Date:   Wed Jun 26 20:59:09 2024 -0600
+
+    add back
+
+[33mcommit 9f198627e3d1fa0e8d8ed56fd47d0d6db2ad8eb2[m
+Merge: 2079295 9760aa9
+Author: Ergusha11 <89668760+Ergusha11@users.noreply.github.com>
+Date:   Sat Jun 22 23:49:26 2024 -0600
+
+    Merge pull request #2 from Juan-Alvarado21/main
+    
+    Forkeo a ergusha
+
+[33mcommit 9760aa9ee7f1edd2fffd193fa48c711cf59cae13[m
+Author: Juan Manuel Alvarado <76979404+Juan-Alvarado21@users.noreply.github.com>
+Date:   Sat Jun 22 23:24:51 2024 -0600
+
+    No poner la api de maps en  location.html publica
+
+[33mcommit a046ba5784f1f6167a27d249ebad7cf1282b7f50[m
+Merge: 6825b3e ec0b69c
+Author: Juan-Alvarado21 <jalvarados1900@alumno.ipn.mx>
+Date:   Sat Jun 22 23:21:36 2024 -0600
+
+    Merge branch 'main' of github.com:Juan-Alvarado21/SystemPlumber
+
+[33mcommit 6825b3e4a0cb0b4103e47fb5ba8497c6550c91db[m
+Author: Juan-Alvarado21 <jalvarados1900@alumno.ipn.mx>
+Date:   Sat Jun 22 23:21:28 2024 -0600
+
+    Limpieza de errores de espacios en blanco
+
+[33mcommit 20792955383ee08b6a30b2fcff3086ed6c75f297[m
+Merge: 966c927 bc37580
+Author: Ergusha11 <89668760+Ergusha11@users.noreply.github.com>
+Date:   Fri Jun 14 22:32:22 2024 -0600
+
+    Merge pull request #1 from titosuperb/main
+    
+    Se agrego 15,17,18,19
+
+[33mcommit ec0b69c19dfb8bc8f50f1ca8ed58b970b0ae5c37[m
+Author: Juan Manuel Alvarado <76979404+Juan-Alvarado21@users.noreply.github.com>
+Date:   Fri Jun 14 23:13:40 2024 -0500
+
+    Editar styles.css
+
+[33mcommit bc37580a82af24b327a2b804ed2b37777a29193a[m
+Author: Your Name <you@example.com>
+Date:   Fri Jun 14 22:13:04 2024 -0600
+
+    Se agrego 15,17,18,19
+
+[33mcommit dd1579a54403e5f92b849bd6a8fdaa81bb7194e5[m
+Author: Juan Manuel Alvarado <76979404+Juan-Alvarado21@users.noreply.github.com>
+Date:   Fri Jun 14 22:05:24 2024 -0600
+
+    Update location.html
+
+[33mcommit 4e892f3410e58cf29e6bff502222eba45f2660ed[m
+Author: Juan Manuel Alvarado <76979404+Juan-Alvarado21@users.noreply.github.com>
+Date:   Fri Jun 14 22:58:43 2024 -0500
+
+    Add files via upload
+
+[33mcommit cbc1745ab2f17f79cd079efad81bf1c67202699f[m
+Author: Juan Manuel Alvarado <76979404+Juan-Alvarado21@users.noreply.github.com>
+Date:   Fri Jun 14 22:57:52 2024 -0500
+
+    Añadir location.html
+
+[33mcommit 966c9270479bcf4ddf02032a3fdf4fdb0c7ad459[m
+Author: Ergusha11 <gustah901@gmail.com>
+Date:   Fri Jun 14 21:34:21 2024 -0600
+
+    add view technician and admi
+
+[33mcommit 299a018ca625279369c8f29470b42191712212c6[m
+Author: Ergusha11 <gustah901@gmail.com>
+Date:   Fri Jun 14 00:45:43 2024 -0600
+
+    add page main
+
+[33mcommit 8135644d23c7cb68cb67cef7ec37a1882319c23d[m
+Author: Ergusha11 <gustah901@gmail.com>
+Date:   Tue Jun 11 10:09:37 2024 -0600
+
+    add files
+
+[33mcommit 0b98dad92e93159070d2cd0b78e498fed4cadb1e[m
+Author: Ergusha11 <gustah901@gmail.com>
+Date:   Tue Jun 11 09:46:49 2024 -0600
+
+    first commit

@@ -13,7 +13,7 @@
             <span class="business-name">Plumber++</span>
         </div>
         <ul>
-            <li><a href="../../index.html">Principal</a></li>
+            <li><a href="../../index.php">Principal</a></li>
             <li><a href="login.php">Iniciar Sesión</a></li>
             <li><a href="../../store.html">Catálogo</a></li>
             <li><a href="">Conócenos</a></li>

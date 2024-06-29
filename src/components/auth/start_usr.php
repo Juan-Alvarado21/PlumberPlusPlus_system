@@ -13,11 +13,11 @@
         <img src="../../img/list.jpg" alt="Logo" class="logo" />
       </div>
       <ul>
-        <li><a href="../../index.html">Principal</a></li>
-        <li><a href="../../store.html">Catálogo</a></li>
+        <li><a href="../../index.php">Principal</a></li>
+        <li><a href="../../store.php">Catálogo</a></li>
         <li><a href="">Conócenos</a></li>
         <li><a href="">Únete</a></li>
-        <li><a href="../../contact.html">Contáctanos</a></li>
+        <li><a href="../../contact.php">Contáctanos</a></li>
       </ul>
       <div class="user-info-container">
         <div class="user-info" id="user-info" onclick="toggleDropdown()">

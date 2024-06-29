@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles/styles5.css" />
     <!--AQUI VA LA API KEY DE MAPS-->
     <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+      async
+      defer
     ></script>
   </head>
   <body>
@@ -16,11 +19,11 @@
         <span class="business-name">Plumber++</span>
       </div>
       <ul>
-        <li><a href="../../index.html">Principal</a></li>
-        <li><a href="login.html">Iniciar Sesión</a></li>
+        <li><a href="../../index.php">Principal</a></li>
+        <li><a href="login.php">Iniciar Sesión</a></li>
         <li><a href="../../store.html">Catálogo</a></li>
-        <li><a href="">Conócenos</a></li>
-        <li><a href="">Únete</a></li>
+        <li><a href="#">Conócenos</a></li>
+        <li><a href="#">Únete</a></li>
         <li><a href="../../contact.html">Contáctanos</a></li>
       </ul>
     </nav>
@@ -30,7 +33,12 @@
       </div>
       <div class="card">
         <h1>Selecciona tu localidad</h1>
-        <form id="address-form">
+        <form
+          id="address-form"
+          method="POST"
+          action="register_address.php"
+          onsubmit="return validateForm();"
+        >
           <div>
             <label for="calle">Calle</label>
             <input
@@ -138,14 +146,12 @@
       }
 
       function isWithinCDMX(lat, lng) {
-        // Define los límites aproximados de la Ciudad de México
         const cdmxBounds = {
           north: 19.592757,
           south: 19.019585,
           west: -99.364202,
           east: -98.940163,
         };
-
         return (
           lat <= cdmxBounds.north &&
           lat >= cdmxBounds.south &&
@@ -159,7 +165,6 @@
         const dialogMessage = document.getElementById("dialog-message");
         dialogMessage.textContent = message;
         dialog.showModal();
-
         const closeDialogButton = document.getElementById("close-dialog");
         closeDialogButton.addEventListener("click", () => {
           dialog.close();

@@ -13,11 +13,11 @@
             <span class="business-name">Plumber++</span>
         </div>
         <ul>
-            <li><a href="../../index.html">Principal</a></li>
+            <li><a href="../../index.php">Principal</a></li>
             <li><a href="login.php">Iniciar Sesión</a></li>
             <li><a href="../../store.html">Catálogo</a></li>
-            <li><a href="">Conócenos</a></li>
-            <li><a href="">Únete</a></li>
+            <li><a href="#">Conócenos</a></li>
+            <li><a href="#">Únete</a></li>
             <li><a href="../../contact.html">Contáctanos</a></li>
         </ul>
     </nav>
@@ -39,6 +39,7 @@
                 <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, ingresa un correo electrónico válido." />
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required pattern=".{6,}" title="La contraseña debe tener al menos 6 caracteres." />
+                <input type="hidden" name="tipoCuenta" value="Usuario">
                 <input type="submit" value="Iniciar Sesión" />
             </form>
             <div class="recover-password">
@@ -56,6 +57,7 @@
                 <input type="email" id="admin-email" name="email" placeholder="Ingresa tu correo electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, ingresa un correo electrónico válido." />
                 <label for="admin-password">Contraseña</label>
                 <input type="password" id="admin-password" name="password" placeholder="Ingresa tu contraseña" required pattern=".{6,}" title="La contraseña debe tener al menos 6 caracteres." />
+                <input type="hidden" name="tipoCuenta" value="Administrador">
                 <input type="submit" value="Iniciar Sesión" />
             </form>
             <div class="recover-password">
@@ -73,6 +75,7 @@
                 <input type="email" id="tech-email" name="email" placeholder="Ingresa tu correo electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, ingresa un correo electrónico válido." />
                 <label for="tech-password">Contraseña</label>
                 <input type="password" id="tech-password" name="password" placeholder="Ingresa tu contraseña" required pattern=".{6,}" title="La contraseña debe tener al menos 6 caracteres." />
+                <input type="hidden" name="tipoCuenta" value="Técnico">
                 <input type="submit" value="Iniciar Sesión" />
             </form>
             <div class="recover-password">
