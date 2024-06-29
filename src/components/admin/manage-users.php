@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
       </div>
       <ul class = "menu" id="menu">
 		<li><a href="destok.html">Dashboard</a></li>
-		<li><a href="manage-users.html">Gestionar Usuarios</a></li>
+		<li><a href="manage-users.php">Gestionar Usuarios</a></li>
 		<li><a href="manage-tec.html">Gestionar Tecnicos</a></li>
 		<li><a href="../technician/materialUsado.html">Gestionar Materiales</a></li>
       </ul>
@@ -50,20 +51,24 @@
             <th>Acciones</th>
           </tr>
         </thead>
-        <tbody>
-          <!-- Filas de usuarios -->
-          <tr>
-            <td>1</td>
-            <td>Juan Pérez</td>
-            <td>juan.perez@example.com</td>
-            <td>Administrador</td>
-            <td>
-              <button class="edit-btn">Editar</button>
-              <button class="delete-btn">Eliminar</button>
-            </td>
-          </tr>
-          <!-- Más filas de usuarios -->
-        </tbody>
+        <tbody id="user-table-body">
+                    <?php foreach ($usuarios as $usuario): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($usuario['id']) ?></td>
+                            <td><?= htmlspecialchars($usuario['nombre']) ?></td>
+                            <td><?= htmlspecialchars($usuario['correo']) ?></td>
+                            <td><?= htmlspecialchars($usuario['rol']) ?></td>
+                            <td>
+                                <button class="edit-btn" onclick="openUserModal(<?= htmlspecialchars(json_encode($usuario)) ?>)">Editar</button>
+                                <form method="post" style="display:inline-block;">
+                                    <input type="hidden" name="id" value="<?= htmlspecialchars($usuario['id']) ?>">
+                                    <input type="hidden" name="action" value="delete">
+                                    <button type="submit" class="delete-btn">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody> 
       </table>
     </main>
   </div>
