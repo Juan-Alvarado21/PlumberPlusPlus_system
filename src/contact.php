@@ -18,7 +18,7 @@
         <li><a href="store.html">Catálogo</a></li>
         <li><a href="">Conócenos</a></li>
         <li><a href="">Únete</a></li>
-        <li><a href="contact.html">Contáctanos</a></li>
+        <li><a href="contact.php">Contáctanos</a></li>
       </ul>
     </nav>
     <div class="contact-container">
